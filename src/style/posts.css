@@ -1,0 +1,97 @@
+.post-page {
+  width: 800px;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+.post-page .content {
+  padding: 0 24px;
+}
+
+.post-page header {
+  width: 100%;
+  padding: 20px 37px;
+  background-color: #7695ec;
+  color: #ffff;
+  margin-bottom: 24px;
+}
+
+/* ----------- POSTCREATED  ----------- */
+
+.postCreated {
+  width: 100%;
+  border: 1px solid #999999;
+  padding: 24px;
+  border-radius: 16px;
+  outline: none;
+  margin-bottom: 24px;
+}
+
+.postCreated-item {
+  max-width: 100%;
+  margin: 24px 0;
+}
+
+.postCreated .content-post textarea {
+  resize: none;
+  width: 100% !important;
+  height: 74px !important;
+  padding: 10px;
+  border: 1px solid #777777;
+  border-radius: 5px;
+  outline: none;
+  margin-top: 8px;
+}
+
+textarea:focus {
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.349);
+}
+
+.postCreated button {
+  width: 120px;
+}
+
+/* ----------- POSTCARD  ----------- */
+
+.postcard {
+  width: 100%;
+  border: 1px solid #999999;
+  border-radius: 16px;
+}
+
+.postcard header {
+  border-radius: 14px 14px 0 0;
+}
+
+.postcard header,
+.postcard-infos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.postcard-infos {
+  color: #777777;
+}
+
+.postcard-infos .datetime {
+  font-weight: 400;
+}
+
+.postcard span {
+  margin: 0 4px 0 4px;
+}
+
+.postcard .postcard-content {
+  padding: 0 24px 24px 24px;
+}
+
+.postcard-content .text-postcard {
+  margin-top: 16px;
+  font-weight: 500;
+}
+
+.actions span {
+  cursor: pointer;
+}

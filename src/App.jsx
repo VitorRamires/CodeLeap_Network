@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Signin } from "./components/signin/signin";
-import { Posts } from "./components/Posts/Posts";
+import { PostPanel } from "./components/Posts/PostPanel";
 import { UserProvider } from "./context/username";
 import "./style/style.css";
 
@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <UserProvider>
-        {!isLogged ? <Signin onEnter={() => setIsLogged(true)} /> : <Posts />}
+        {!isLogged ? <Signin onEnter={() => setIsLogged(true)} /> : <PostPanel />}
       </UserProvider>
     </>
   );
