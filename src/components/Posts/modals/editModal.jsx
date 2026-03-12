@@ -8,7 +8,7 @@ export function EditPostModal({ dialogRef, id, title, content }) {
     content: content,
   });
 
-    const { setPostsList } = useContext(ListPostContext);
+  const { setPostsList } = useContext(ListPostContext);
 
   const closeModal = () => {
     dialogRef.current.close();
@@ -25,7 +25,9 @@ export function EditPostModal({ dialogRef, id, title, content }) {
 
     const { title, content } = editItem;
     const postEdited = await editPost(id, title, content);
-    setPostsList((prev) => prev.map((post) => post.id === id ? postEdited : post));
+    setPostsList((prev) =>
+      prev.map((post) => (post.id === id ? postEdited : post)),
+    );
   }
 
   return (

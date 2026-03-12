@@ -6,12 +6,12 @@ import { usePostModals } from "./modals/usePostModals";
 import { PostActions } from "../Posts/PostActions";
 import { formateDate } from "../../utilities/formatDate";
 
-export function PostCard({ author, datetime,  title, content, id }) {
+export function PostCard({ author, datetime, title, content, id }) {
   const { username } = useUser();
   const { dialogDeleteRef, dialogEditRef, openDeleteModal, openEditModal } =
     usePostModals();
 
-  const dateFormated = formateDate(datetime)
+  const dateFormated = formateDate(datetime);
 
   const isAuthor = username === author;
   const buttonsActionsVisible = isAuthor ? (

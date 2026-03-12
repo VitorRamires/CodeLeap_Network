@@ -6,7 +6,7 @@ import { usePagination } from "../../utilities/pagination";
 
 export function PostList() {
   const { postsList, setPostsList, setOffset } = useContext(ListPostContext);
- const { bottomRef } = usePagination();
+  const { bottomRef } = usePagination();
 
   useEffect(() => {
     async function initialLoad() {
@@ -27,7 +27,7 @@ export function PostList() {
             title={title}
             content={content}
             id={id}
-            key={id + "title"}
+            key={ id }
           />
         ))}
         <div className="pagination-btns">

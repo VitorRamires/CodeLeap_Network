@@ -54,6 +54,8 @@
 .postcard header {
   border-radius: 14px 14px 0 0;
   padding: 20px 24px;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .postcard .author {
@@ -69,6 +71,8 @@
 
 .postcard-infos {
   color: #777777;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .postcard-infos .datetime {
@@ -127,6 +131,20 @@
   margin: 0;
 }
 
+/* LIKES */
+
+.likes {
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 0 auto;
+  padding: 5px 16px;
+  background-color: rgb(240, 240, 240);
+  border-radius: 0 0 16px 0;
+  cursor: pointer;
+}
+
 /* ANIMATIONS */
 
 @keyframes slideIn {
@@ -137,5 +155,17 @@
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .postcard-infos .datetime {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 310px) {
+  .postcard header h3 {
+    font-size: 1rem;
   }
 }

@@ -12,7 +12,11 @@ function App() {
     <>
       <UserProvider>
         <ListPostProvider>
-          {!isLogged ? <Signin onEnter={() => setIsLogged(true)} /> : <PostPanel />}
+          {!isLogged ? (
+            <Signin onEnter={() => setIsLogged(true)} />
+          ) : (
+            <PostPanel />
+          )}
         </ListPostProvider>
       </UserProvider>
     </>
