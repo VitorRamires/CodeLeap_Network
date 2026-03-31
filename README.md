@@ -20,6 +20,7 @@ Desenvolvimento de uma rede social dinâmica integrada à API da CodeLeap. O pro
   <li>🔄 Infinite Scroll para os posts carregando de 5 em 5</li>
   <li>👍 Sistema de curtidas para cada post (Like)</li>
   <li>🔑 Segurança de Interface: Rotas protegidas e modais de confirmação para ações críticas (como deletar posts).</li>
+  <li>💬 Comentarios: Sessão de comentarios para cada post.</li>
 </ul>
 <br />
 <h3>🚀 Como rodar:</h3>
