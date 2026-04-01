@@ -11,7 +11,7 @@ import { useCreateComment } from "./features/createComment.jsx";
 import { Actions } from "./actions.jsx";
 
 export function PostCard({ author, datetime, title, content, id }) {
-  const { createCommentHandler, commentList } = useCreateComment();
+  const { createCommentHandler, commentList } = useCreateComment(id);
 
   const {
     dialogDeleteRef,
@@ -56,7 +56,7 @@ export function PostCard({ author, datetime, title, content, id }) {
         />
         <CommentsModal
           dialogRef={dialogCommentRef}
-          createComment={createCommentHandler}
+          createCommentHandler={createCommentHandler}
           contentPost={content}
         />
       </div>

@@ -1,18 +1,24 @@
 import { useUser } from "../../../context/username";
 import { useState } from "react";
 
-export function CommentsModal({ dialogRef, createComment, contentPost }) {
+export function CommentsModal({
+  dialogRef,
+  createCommentHandler,
+  contentPost,
+}) {
   const { username } = useUser();
   const [commentary, setCommentary] = useState("");
-
+  const closeModal = () => {
+    dialogRef.current.close();
+  };
 
   function createNewCommentary({ target }) {
     setCommentary(target.value);
   }
 
   function sendCommentary() {
-    createComment(commentary, username);
-    dialogRef.current.close()
+    createCommentHandler(commentary, username);
+    closeModal();
   }
 
   return (
@@ -25,7 +31,13 @@ export function CommentsModal({ dialogRef, createComment, contentPost }) {
           placeholder="Reply Here!"
           value={commentary}
         />
-        <button onClick={sendCommentary}>Reply</button>
+
+        <div className="dialog-btns">
+          <button onClick={closeModal}>Cancel</button>
+          <button className="positive-btn" onClick={sendCommentary}>
+            Reply
+          </button>
+        </div>
       </div>
     </dialog>
   );

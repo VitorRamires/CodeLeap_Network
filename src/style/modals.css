@@ -9,8 +9,7 @@ dialog {
   border-radius: 16px;
   padding: 24px;
   animation: grow 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  overflow:hidden;
-
+  overflow: hidden;
 }
 
 .dialog-btns {
@@ -40,7 +39,7 @@ dialog button {
 }
 
 .delete-btn,
-.edit-btn {
+.positive-btn {
   color: #ffffff;
   border: none;
   transition: 0.2s;
@@ -50,11 +49,11 @@ dialog button {
   background-color: #ff5151;
 }
 
-.edit-btn {
+.positive-btn {
   background-color: #47b960;
 }
 
-.edit-btn:hover {
+.positive-btn:hover {
   background-color: #2d8f42;
 }
 
@@ -68,6 +67,20 @@ dialog::backdrop {
 
 .edit-item {
   margin-bottom: 24px;
+}
+
+.comments textarea {
+  position: relative;
+  z-index: 2;
+  border: none;
+  padding: 0;
+  margin-top: 80px;
+  font-size: 1rem;
+  padding-top: 10px;
+}
+
+.comments textarea:focus {
+  box-shadow: none;
 }
 
 /* ANIMATIONS */

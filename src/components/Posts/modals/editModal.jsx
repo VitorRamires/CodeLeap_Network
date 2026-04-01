@@ -56,7 +56,7 @@ export function EditPostModal({ dialogRef, id, title, content }) {
 
           <div className="dialog-btns">
             <button onClick={closeModal}>Cancel</button>
-            <button className="edit-btn" type="submit">
+            <button className="positive-btn" type="submit">
               Edit
             </button>
           </div>
