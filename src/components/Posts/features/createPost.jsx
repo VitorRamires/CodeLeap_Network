@@ -19,6 +19,11 @@ export function useCreatePost() {
     const newPost = await createPost(username, title, content);
     setPostsList((prev) => [newPost, ...prev]);
     setOffset((prev) => prev + 1);
+    setPostContent((prev) => ({
+      ...prev,
+      title: "",
+      content: "",
+    }));
   }
 
   return { handlePostCreation, setPostContent, postContent };

@@ -5,7 +5,10 @@ import { createContext, useState } from "react";
 export const ListPostContext = createContext();
 
 export function ListPostProvider({ children }) {
-  const [postsList, setPostsList] = useState([]);
+  const [postsList, setPostsList] = useState([{
+    title:"",
+    content:""
+  }]);
   const [offset, setOffset] = useState();
 
   return (

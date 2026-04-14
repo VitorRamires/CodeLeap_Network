@@ -22,12 +22,12 @@ export function PostCreated() {
       <form onSubmit={handlePostCreation}>
         <div className="postCreated-item title-post">
           <label htmlFor="title">Title</label>
-          <input id="title" type="text" onChange={handleChangeForm} />
+          <input value={postContent.title} id="title" type="text" onChange={handleChangeForm} />
         </div>
 
         <div className="postCreated-item content-post">
           <label htmlFor="content">Content</label>
-          <textarea id="content" onChange={handleChangeForm} />
+          <textarea value={postContent.content} id="content" onChange={handleChangeForm} />
         </div>
 
         <button
