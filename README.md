@@ -1,4 +1,4 @@
-<h2>CodeLeap Network</h2>
+<h2>Leap Network</h2>
 <br />
 <h3>🎯 Objetivo</h3>
 Desenvolvimento de uma rede social dinâmica integrada à API da CodeLeap. O projeto foca em gerenciamento de estado complexo, persistência de dados local e otimização de performance através de carregamento sob demanda (Infinite Scroll).
