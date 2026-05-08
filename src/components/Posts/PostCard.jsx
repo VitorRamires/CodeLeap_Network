@@ -5,7 +5,7 @@ import { usePostModals } from "./modals/usePostModals";
 import { formateDate } from "../../utilities/formatDate";
 import { LikeButton } from "./features/likes";
 import { CommentsModal } from "./modals/commentsModal.jsx";
-import { CommentaryList } from "./commentaryList.jsx";
+import { CommentaryList } from "./CommentaryList.jsx";
 
 import { useCreateComment } from "./features/createComment.jsx";
 import { Actions } from "./actions.jsx";
