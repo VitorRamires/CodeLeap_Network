@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { useCreatePost } from "./features/createPost";
+import { createPortal } from "react-dom";
 
 export function PostCreated() {
-  const { handlePostCreation, setPostContent, postContent } = useCreatePost();
+  const { handlePostCreation, setPostContent, postContent, isLoading } =
+    useCreatePost();
   const [isDisabled, setIsDisabled] = useState(true);
 
   function handleChangeForm(event) {
@@ -46,6 +48,7 @@ export function PostCreated() {
           </button>
         </form>
       </section>
+      {createPortal(isLoading ? <p className="creating-post">Creating post...</p> : null, document.body)}
     </>
   );
 }

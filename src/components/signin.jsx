@@ -30,7 +30,7 @@ export function Signin({ onEnter }) {
           className={isDisabled ? "disabled" : ""}
           type="submit"
         >
-          ENTER
+          Sign On
         </button>
       </form>
     </div>

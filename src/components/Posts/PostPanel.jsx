@@ -11,7 +11,7 @@ export function PostPanel() {
         <header>
           <p>User: {username}</p>
           <div className="account">
-            <button onClick={logout}>Logout</button>
+            <button onClick={logout}>Sign off</button>
           </div>
         </header>
         <div className="content">

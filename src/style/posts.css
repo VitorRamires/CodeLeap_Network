@@ -75,6 +75,22 @@
   color: #ffffff;
 }
 
+.creating-post {
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  max-width: 100%;
+  padding: 15px;
+  background-color: #8668f3;
+  text-align: center;
+  border-radius: 5px;
+  color: #ffffff;
+  font-weight: bold;
+  box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.24);
+}
+
 /* ----------- POSTCARD  ----------- */
 
 .postcard {
