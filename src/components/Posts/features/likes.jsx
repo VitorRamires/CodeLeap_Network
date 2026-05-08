@@ -44,8 +44,8 @@ export function LikeButton({ id }) {
   }
 
   return (
-    <button onClick={handleLike} className={`like-btn ${liked ? "liked" : ""}`}>
+    <div onClick={handleLike} className={`like-btn ${liked ? "liked" : ""}`}>
       <ThumbUp filled={liked} /> {likes}
-    </button>
+    </div>
   );
 }

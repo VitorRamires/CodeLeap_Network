@@ -30,7 +30,6 @@ export function PostList() {
     initialLoad();
   }, []);
 
-
   if (error) {
     return <ErrorPage />;
   }
@@ -47,7 +46,7 @@ export function PostList() {
                 title={title}
                 content={content}
                 id={id}
-                key={id}
+                key={`${id}${title}`}
               />
             ),
           )}

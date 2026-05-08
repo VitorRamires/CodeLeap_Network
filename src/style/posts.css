@@ -1,21 +1,22 @@
 .post-page {
-  width: 800px;
-  max-width: 100%;
+  width: 100%;
   margin: 0 auto;
-  background-color: #ffffff;
   border-radius: 0 0 16px 16px;
 }
 
 .post-page .content {
+  width: 1360px;
+  max-width: 100%;
+  margin: 0 auto;
   padding: 0 24px 10px 24px;
 }
 
-.post-page header {
+.post-page header:not(.postcard header) {
   width: 100%;
   position: sticky;
   top: 0;
   padding: 20px 37px;
-  background-color: #7695ec;
+  background-color: #474747;
   color: #ffff;
   margin-bottom: 24px;
   display: flex;
@@ -39,23 +40,39 @@
 
 /* ----------- POSTCREATED  ----------- */
 
+.apresentation-title {
+  color: #8668f3;
+  margin: 40px 0 25px 0;
+}
+
 .postCreated {
   width: 100%;
-  border: 1px solid #999999;
-  padding: 24px;
+  padding: 20px;
   border-radius: 16px;
   outline: none;
+  background-color: #212121;
   margin-bottom: 24px;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, 0.25);
+}
+
+.postCreated h2 {
+  color: #8668f3;
 }
 
 .postCreated-item {
   max-width: 100%;
-  margin: 24px 0;
+  margin-bottom: 25px;
 }
 
 .postCreated button {
-  width: 120px;
+  width: 100px;
+  height: unset;
+  margin: unset;
+  margin-right: auto;
+}
+
+.postCreated label {
+  color: #ffffff;
 }
 
 /* ----------- POSTCARD  ----------- */
@@ -69,10 +86,10 @@
   animation: slideIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   opacity: 0;
   transform: 0.2s;
+  color: #c2c2c2;
 }
 
 .postcard header {
-  border-radius: 14px 14px 0 0;
   padding: 20px 24px;
   flex-wrap: wrap;
   gap: 15px;
@@ -97,6 +114,7 @@
 
 .postcard-infos .datetime {
   font-weight: 400;
+  font-size: 12px;
 }
 
 .postcard .postcard-content {
@@ -104,9 +122,10 @@
 }
 
 .postcard-content .text-postcard {
-  margin-top: 16px;
+  margin-top: 18px;
   font-weight: 500;
   overflow-wrap: break-word;
+  font-size: 14px;
 }
 
 /* ----- POST-ACTIONS ------ */
@@ -128,7 +147,7 @@
 
 .postcard img {
   transition: 0.2s;
-  width: 32px;
+  width: 30px;
   height: auto;
 }
 
@@ -151,12 +170,6 @@
   margin: 0;
 }
 
-/* LIKES */
-
-.like-btn svg {
-  margin-top: 2px;
-}
-
 /* ACCOUNT */
 
 .account {
@@ -171,11 +184,14 @@
 
 .comments {
   text-align: start;
+  font-size: 14px;
+  color: #ffffff;
 }
-
 .comments p {
   margin-top: 20px;
   word-break: break-all;
+  border-top: 1px solid rgb(97, 97, 97);
+  padding-top: 15px;
 }
 
 .commentary-list {
@@ -191,10 +207,11 @@
   background-color: #d1d1d1;
 }
 
-
 .content-commentPost {
   position: relative;
   padding-bottom: 10px;
+  font-size: 14px;
+  color: #c7c7c7;
 }
 
 .content-commentPost::before {
@@ -204,13 +221,18 @@
   left: 2%;
   width: 2px;
   height: 80px;
-  background-color: #7695ec;
+  background-color: #8668f3;
 }
-
 
 .comment-icon {
   width: 25px !important;
   height: auto;
+}
+
+.no-comments {
+  font-size: 14px;
+  margin-top: 25px;
+  color: #bdbdbd;
 }
 
 /* ANIMATIONS */

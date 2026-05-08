@@ -10,13 +10,13 @@
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  border-top: 1em solid #7695ec;
+  border-top: 1em solid #8668F3;
   animation: spin 1.5s linear infinite;
 }
 
 .loading-animation{
   text-align: center;
-  color: #7695ec;
+  color: #8668F3;
 }
 
 @keyframes spin {

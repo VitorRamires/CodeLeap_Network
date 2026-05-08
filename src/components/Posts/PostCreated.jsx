@@ -2,8 +2,6 @@ import { useState } from "react";
 import { useCreatePost } from "./features/createPost";
 
 export function PostCreated() {
-
-  
   const { handlePostCreation, setPostContent, postContent } = useCreatePost();
   const [isDisabled, setIsDisabled] = useState(true);
 
@@ -16,28 +14,38 @@ export function PostCreated() {
   }
 
   return (
-    <section className="postCreated">
-      <h2 className="">What’s on your mind?</h2>
+    <>
+      <h2 className="apresentation-title">What’s on your mind?</h2>
+      <section className="postCreated">
+        <form onSubmit={handlePostCreation}>
+          <div className="postCreated-item title-post">
+            <label htmlFor="title">Post title</label>
+            <input
+              value={postContent.title}
+              id="title"
+              type="text"
+              onChange={handleChangeForm}
+            />
+          </div>
 
-      <form onSubmit={handlePostCreation}>
-        <div className="postCreated-item title-post">
-          <label htmlFor="title">Title</label>
-          <input value={postContent.title} id="title" type="text" onChange={handleChangeForm} />
-        </div>
+          <div className="postCreated-item content-post">
+            <label htmlFor="content">Post content</label>
+            <textarea
+              value={postContent.content}
+              id="content"
+              onChange={handleChangeForm}
+            />
+          </div>
 
-        <div className="postCreated-item content-post">
-          <label htmlFor="content">Content</label>
-          <textarea value={postContent.content} id="content" onChange={handleChangeForm} />
-        </div>
-
-        <button
-          disabled={isDisabled}
-          className={!isDisabled ? "" : "disabled"}
-          type="submit"
-        >
-          Create
-        </button>
-      </form>
-    </section>
+          <button
+            disabled={isDisabled}
+            className={!isDisabled ? "" : "disabled"}
+            type="submit"
+          >
+            Reply
+          </button>
+        </form>
+      </section>
+    </>
   );
 }

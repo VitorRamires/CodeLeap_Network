@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #dddddd;
+  background-color: #272727;
   width: 100%;
   height: 100vh;
 }
@@ -24,16 +24,18 @@ button {
 textarea {
   resize: none;
   width: 100% !important;
-  height: 74px !important;
+  height: 124px !important;
   padding: 10px;
-  border: 1px solid #777777;
+  border: 1px solid #ffffff;
   border-radius: 5px;
   outline: none;
   margin-top: 8px;
+  background-color: transparent;
+  color: #dddddd;
 }
 
 textarea:focus {
-  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.349);
+  border: 2px solid #9b80ff;
 }
 
 input {
@@ -41,13 +43,15 @@ input {
   padding: 0 7px;
   height: 32px;
   margin-top: 8px;
-  border: 1px solid #777777;
+  border: 1px solid #ffffff;
   border-radius: 5px;
   outline: none;
+  background-color: transparent;
+  color: #dddddd;
 }
 
 input:focus {
-  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.349);
+  border: 2px solid #9b80ff;
 }
 
 input::placeholder {
@@ -55,14 +59,14 @@ input::placeholder {
 }
 
 button {
-  width: 130px;
-  height: 32px;
+  width: fit-content;
   max-width: 100%;
-  background-color: #7695ec;
+  background-color: #8668f3;
   border: none;
   border-radius: 8px;
+  padding: 10px 25px;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 14px;
   margin: 16px 0 0 auto;
   cursor: pointer;
   transition: 0.2s;
@@ -70,7 +74,12 @@ button {
 }
 
 button:not(.disabled):not(dialog button):hover {
-  background-color: #4f79ec;
+  background-color: #6945eb;
+}
+
+.like-btn {
+  margin: unset;
+  cursor: pointer;
 }
 
 .disabled {

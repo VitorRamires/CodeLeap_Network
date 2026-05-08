@@ -17,9 +17,11 @@ export function PostCard({ author, datetime, title, content, id }) {
     dialogDeleteRef,
     dialogEditRef,
     dialogCommentRef,
+    dialogCommentListRef,
     openDeleteModal,
     openEditModal,
     openCommentModal,
+    openCommentListModal,
   } = usePostModals();
 
   const dateFormated = formateDate(datetime);
@@ -28,7 +30,7 @@ export function PostCard({ author, datetime, title, content, id }) {
     <>
       <div className="postcard">
         <header>
-          <h3>{title}</h3>
+          <p className="author">{`@${author}`}</p>
           <Actions
             author={author}
             deleteOpenModal={openDeleteModal}
@@ -38,14 +40,16 @@ export function PostCard({ author, datetime, title, content, id }) {
         </header>
         <div className="postcard-content">
           <div className="postcard-infos">
-            <p className="author">{`@${author}`}</p>
+            <h3>{title}</h3>
             <p className="datetime">{dateFormated}</p>
           </div>
           <p className="text-postcard">{content}</p>
-          <LikeButton id={id} />
-        </div>
-        <div className="commentary-list">
-          <CommentaryList commentList={commentList} />
+          <div className="extra-actions">
+            <LikeButton id={id} />
+            <p className="see-comments" onClick={openCommentListModal}>
+              See comments: {commentList.length}
+            </p>
+          </div>
         </div>
         <DeletePostModal id={id} dialogRef={dialogDeleteRef} />
         <EditPostModal
@@ -58,6 +62,12 @@ export function PostCard({ author, datetime, title, content, id }) {
           dialogRef={dialogCommentRef}
           createCommentHandler={createCommentHandler}
           contentPost={content}
+        />
+        <CommentaryList
+          commentList={commentList}
+          dialogRef={dialogCommentListRef}
+          title={title}
+          author={author}
         />
       </div>
     </>

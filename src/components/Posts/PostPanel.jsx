@@ -9,9 +9,8 @@ export function PostPanel() {
     <>
       <section className="post-page">
         <header>
-          <h2>CodeLeap Network</h2>
+          <p>User: {username}</p>
           <div className="account">
-            <p>User: {username}</p>
             <button onClick={logout}>Logout</button>
           </div>
         </header>

@@ -3,28 +3,39 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #ffffff;
+  background: linear-gradient(90deg, #272727, #414141);
   padding: 24px;
   max-width: 95%;
-  border: 1px solid #cccccc;
-  border-radius: 16px;
+  border-radius: 8px;
+  box-shadow: 5px 5px 4px 0 rgba(0, 0, 0, 0.295);
 }
 
 .signin-page h2 {
   margin-bottom: 24px;
+  color: #ffffff;
 }
 
 .signin-page form {
   width: 500px;
   max-width: 95%;
+  color: #ffffff;
 }
 
+.signin-page input {
+  border: 1px solid #8668f3;
+}
+
+.signin-page input:focus{
+  border: 2px solid #9b80ff; ;
+}
+
+.signin-page input::placeholder{
+  color: rgb(83, 83, 83);
+}
 
 label {
   font-weight: 400;
 }
-
-
 
 @media screen and (max-width: 280px) {
   .signin-page h2,

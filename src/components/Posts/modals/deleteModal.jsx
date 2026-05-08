@@ -18,7 +18,7 @@ export function DeletePostModal({ id, dialogRef }) {
   return (
     <>
       <dialog ref={dialogRef}>
-        <h3>Are you sure you want to delete this item?</h3>
+        <h3>Are you sure you want to delete this Post?</h3>
         <div className="dialog-btns">
           <button onClick={closeModal}>Cancel</button>
           <button className="delete-btn" onClick={handlerDeletePost}>

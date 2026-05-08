@@ -10,24 +10,21 @@ dialog {
   padding: 24px;
   animation: grow 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   overflow: hidden;
+  background-color: #272727;
+  color: #ffffff;
 }
 
 .dialog-btns {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   gap: 16px;
 }
 
 dialog button {
   margin: 40px 0 0 0;
-  background-color: #ffffff;
-  color: #000000;
-  border: 1px solid #999999;
-}
-
-.edit-modal {
-  height: 340px;
+  background-color: #939393;
+  color: #ffffff;
 }
 
 .edit-modal h3 {
@@ -50,11 +47,11 @@ dialog button {
 }
 
 .positive-btn {
-  background-color: #47b960;
+  background-color: #8668f3;
 }
 
 .positive-btn:hover {
-  background-color: #2d8f42;
+  background-color: #6d4aec;
 }
 
 .delete-btn:hover {
@@ -62,7 +59,7 @@ dialog button {
 }
 
 dialog::backdrop {
-  background-color: rgba(119, 119, 119, 0.8);
+  background-color: rgba(0, 0, 0, 0.726);
 }
 
 .edit-item {
@@ -75,12 +72,30 @@ dialog::backdrop {
   border: none;
   padding: 0;
   margin-top: 80px;
-  font-size: 1rem;
+  font-size: 1.4rem;
   padding-top: 10px;
 }
 
 .comments textarea:focus {
   box-shadow: none;
+}
+
+.extra-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 45px;
+  margin-top: 35px;
+}
+
+.see-comments {
+  font-size: 16px;
+  color: #af9aff;
+  cursor: pointer;
+}
+
+.see-comments:hover{
+  text-decoration: underline;
 }
 
 /* ANIMATIONS */

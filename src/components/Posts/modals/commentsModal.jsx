@@ -33,10 +33,10 @@ export function CommentsModal({
         />
 
         <div className="dialog-btns">
-          <button onClick={closeModal}>Cancel</button>
           <button className="positive-btn" onClick={sendCommentary}>
             Reply
           </button>
+          <button onClick={closeModal}>Cancel</button>
         </div>
       </div>
     </dialog>

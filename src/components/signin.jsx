@@ -15,9 +15,9 @@ export function Signin({ onEnter }) {
 
   return (
     <div className="signin-page">
-      <h2 className="title-signin">Welcome to CodeLeap network</h2>
+      <h2 className="title-signin">Leap Network Login</h2>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="signin-input">Please enter your username</label>
+        <label htmlFor="signin-input">Username</label>
         <input
           type="text"
           id="signin-input"

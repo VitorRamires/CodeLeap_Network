@@ -33,7 +33,7 @@ export function EditPostModal({ dialogRef, id, title, content }) {
   return (
     <>
       <dialog ref={dialogRef} className="edit-modal">
-        <h3>Edit Item</h3>
+        <h3>Edit Post</h3>
         <form onSubmit={handlerEditPost}>
           <div className="title-post edit-item">
             <label htmlFor="title">Title</label>
@@ -55,10 +55,10 @@ export function EditPostModal({ dialogRef, id, title, content }) {
           </div>
 
           <div className="dialog-btns">
-            <button onClick={closeModal}>Cancel</button>
             <button className="positive-btn" type="submit">
-              Edit
+              Save Changes
             </button>
+            <button onClick={closeModal}>Cancel</button>
           </div>
         </form>
       </dialog>
